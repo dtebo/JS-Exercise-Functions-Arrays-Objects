@@ -103,9 +103,14 @@ function temperatureInF(temp, unit) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
-}
+  return {
+    id: id,
+    name: name,
+    email: email
+  };
+} 
 
 /**
  * ### Challenge `getName`

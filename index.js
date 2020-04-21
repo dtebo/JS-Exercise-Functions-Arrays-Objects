@@ -316,19 +316,22 @@ function getOlderCars(inventory, max_year) {
   let arr = [];
 
   if(max_year <= 1950){
-    return arr;
+    return arr; // return the empty array
   }
   else if(max_year >= 2019)
   {
-    return inventory;
+    return inventory; // return the entire inventory
   }
 
   for(let i = 0; i < inventory.length; i++){
-    if(inventory[i].car_year >= max_year){
+    // if the car_year of the current inventory item is greater than or equal to the max_year
+    if(inventory[i].car_year <= max_year){
+      // add the inventory item to the array
       arr.push(inventory[i]);
     }
   }
 
+  // return the sorted array
   return arr.sort();
 }
 

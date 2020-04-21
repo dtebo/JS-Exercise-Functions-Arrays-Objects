@@ -76,8 +76,14 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
+function temperatureInF(temp, unit) {
   /* code here */
+  if(unit === 'C'){
+    return Math.round(temp * (9 / 5) + 32) + 'F';
+  }
+  else{
+    return temp + 'F';
+  }
 }
 
 
